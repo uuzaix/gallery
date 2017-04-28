@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="style.css">
   <title>Gallery</title>
 </head>
@@ -12,11 +12,15 @@
 <body>
   <div id="container">
     <div>Test Gallery</div>
-    <div class="image-container">
-      <img class="image" alt="Randow picture from the gallery">
+    <div class="gallery">
+      <img class="image" src="http://lorempixel.com/600/350/?1" alt="Randow picture from the gallery">
+      <img class="image image-invisible" src="http://lorempixel.com/600/350/?2" alt="Randow picture from the gallery">
+      <img class="image image-invisible" src="http://lorempixel.com/600/350/?3" alt="Randow picture from the gallery">
+      <img class="image image-invisible" src="http://lorempixel.com/600/350/?4" alt="Randow picture from the gallery">
+      <img class="image image-invisible" src="http://lorempixel.com/600/350/?5" alt="Randow picture from the gallery">
     </div>
     <button class="btn-prev">previous</button>
-    <span class="counter"></span>
+    <span class="counter">1 / 5</span>
     <button class="btn-next">next</button>
   </div>
   <script src='script.js'></script>

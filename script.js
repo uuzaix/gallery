@@ -1,24 +1,19 @@
-
-document.body.onload = addImage;
-
-let counter = 1;
-const gallerySize = 5;
-
-function addImage() {
-  const img = document.querySelector('.image');
-  const counterDiv = document.querySelector('.counter');
-  img.setAttribute("src", "http://lorempixel.com/600/350/?" + counter);
-  document.querySelector('.image-container').appendChild(img);
-  counterDiv.innerHTML = counter + " / " + gallerySize
-  console.log(img.getAttribute("src"))
-}
+let counter = 0;
+const gallerySize = 4;
 
 function changeImage() {
-  const img = document.querySelector('.image');
-  const counterDiv = document.querySelector('.counter');
-  img.setAttribute("src", "http://lorempixel.com/600/350/?" + counter);
-  counterDiv.innerHTML = counter + " / " + gallerySize
-  console.log(img.getAttribute("src"))
+  const imgList = document.querySelectorAll('.image');
+  console.log(imgList)
+  for (let i = 0; i < imgList.length; i++) {
+    if (i === counter) {
+      console.log("visible", i)
+      imgList[i].setAttribute("class", "image");
+    } else {
+      console.log("invisible", i)
+      imgList[i].setAttribute("class", "image image-invisible");
+    }
+  }
+  document.querySelector('.counter').innerHTML = (counter + 1) + " / " + (gallerySize + 1)
 }
 
 const btnNext = document.querySelector('.btn-next');
@@ -26,14 +21,14 @@ const btnPrev = document.querySelector('.btn-prev');
 
 btnNext.addEventListener('click', function () {
   if (counter === gallerySize) {
-    counter = 1;
+    counter = 0;
   } else {
     counter += 1
   }
   changeImage()
 })
 btnPrev.addEventListener('click', () => {
-  if (counter === 1) {
+  if (counter === 0) {
     counter = gallerySize;
   } else {
     counter -= 1
