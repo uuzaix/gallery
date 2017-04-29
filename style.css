@@ -12,8 +12,17 @@ html, body {
     margin: 0px;
 }
 
+.container {
+  padding-top: 70px;
+}
 
 /* navigation header*/
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -42,6 +51,13 @@ html, body {
 }
 
 /**/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .image-invisible {
   display: none;
 }
@@ -51,4 +67,9 @@ html, body {
 }
 #about {
   height: 200px;
+}
+
+.gallery-nav {
+  margin-bottom: 50px;
+
 }
