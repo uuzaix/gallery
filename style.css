@@ -71,5 +71,20 @@ html, body {
 
 .gallery-nav {
   margin-bottom: 50px;
+}
 
+#gallery {
+  position: relative;
+}
+
+/*gallery nav buttons*/
+.btn-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+.btn-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
