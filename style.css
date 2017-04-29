@@ -51,7 +51,6 @@ html, body {
 }
 
 /**/
-
 .main {
   display: flex;
   flex-direction: column;
@@ -65,26 +64,52 @@ html, body {
 #home {
   height: 200px;
 }
+
 #about {
   height: 200px;
-}
-
-.gallery-nav {
-  margin-bottom: 50px;
 }
 
 #gallery {
   position: relative;
 }
 
+.counter {
+  margin-bottom: 50px;
+}
+
 /*gallery nav buttons*/
+.btn-gallery {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 52px;
+  width: 52px;
+  margin-top: -26px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-gallery:hover {
+  background-color: rgba(0,0,0,0.85)
+}
+
 .btn-next {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 10px;
 }
+
 .btn-prev {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 10px;
+}
+
+.icon {
+  fill: #fff;
+  position: absolute;
+  left: 8px;
+  top: 8px;
 }
