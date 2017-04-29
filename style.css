@@ -71,6 +71,11 @@ html, body {
 
 #gallery {
   position: relative;
+  max-height: 350px;
+}
+
+#gallery img {
+  max-width: 100%;
 }
 
 .counter {
