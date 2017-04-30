@@ -47,13 +47,18 @@ html, body {
 .nav-item:hover {
   background-color: #009688;
 }
+
 .nav-item:visited {
   color: white;
 }
 
 .menu-icon {
   display: none;
-  padding-right: 15px;
+  padding: 20px;
+}
+
+.menu-icon:hover {
+  background-color: #009688;
 }
 
 /**/
@@ -174,7 +179,7 @@ html, body {
   .navbar.responsive .menu-icon {
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 0;
   }
   .navbar.responsive a {
     display: block;

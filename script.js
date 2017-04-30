@@ -45,6 +45,16 @@ function toggleMenu() {
     nav.className = "navbar"
   }
 }
-const menuIcon = document.querySelector('.menu-icon');
 
-menuIcon.addEventListener('click', () => toggleMenu())
+function closeMenu() {
+  const nav = document.getElementById('topnav');
+  if (nav.className === "navbar responsive") {
+    nav.className = "navbar"
+  }
+}
+
+const menuIcon = document.querySelector('.menu-icon');
+menuIcon.addEventListener('click', () => toggleMenu());
+
+const menuItems = document.querySelectorAll('.nav-item');
+menuItems.forEach(el => el.addEventListener('click', () => closeMenu()))
