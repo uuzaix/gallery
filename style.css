@@ -1,53 +1,59 @@
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
-    font-family: "Open Sans", sans-serif;
-    font-size: 20px;
-    margin: 0px;
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  margin: 0px;
 }
 
 .container {
   padding-top: 70px;
 }
 
+
 /* navigation header*/
 .navbar {
   top: 0;
   position: fixed;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #9C27B0;
+  color: #fff;
+  align-items: center;
 }
 
 .nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start;
   list-style: none;
-  background-color: #9C27B0;
-  color: #fff;
   margin: 0px;
   overflow: hidden;
-  text-align: center;
-}
-.nav-item {
-  height: 100%;
-  text-align: center;
 }
 
 .nav-item {
+  height: 100%;
+  text-align: center;
   padding: 20px 16px;
   text-decoration: none;
 }
+
 .nav-item:hover {
   background-color: #009688;
 }
 .nav-item:visited {
   color: white;
+}
+
+.menu-icon {
+  display: none;
+  padding-right: 15px;
 }
 
 /**/
@@ -82,18 +88,18 @@ html, body {
   margin-bottom: 50px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /*gallery nav buttons*/
 .btn-gallery {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   height: 52px;
   width: 52px;
   margin-top: -26px;
   color: #fff;
   background-color: rgba(0,0,0,0.25);
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .btn-gallery:hover {
@@ -135,7 +141,7 @@ html, body {
 }
 
 .footer div+div {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .footer a {
@@ -144,6 +150,34 @@ html, body {
 }
 
 .footer a:hover {
-    text-decoration: underline;
-    color: #009688;
+  text-decoration: underline;
+  color: #009688;
+}
+
+/*media querries*/
+@media screen and (max-width: 600px) {
+    html, body {
+      font-size: 0.9em;
+  }
+  .nav a:not(:first-child) {
+    display: none;
+  }
+  .navbar .menu-icon {
+    display: block;
+  }
+
+  .navbar.responsive .nav{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.responsive .menu-icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+  .navbar.responsive a {
+    display: block;
+    text-align: left;
+  }
 }

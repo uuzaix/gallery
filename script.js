@@ -27,6 +27,7 @@ btnNext.addEventListener('click', function () {
   }
   changeImage()
 })
+
 btnPrev.addEventListener('click', () => {
   if (counter === 0) {
     counter = gallerySize;
@@ -35,3 +36,15 @@ btnPrev.addEventListener('click', () => {
   }
   changeImage()
 })
+
+function toggleMenu() {
+  const nav = document.getElementById('topnav');
+  if (nav.className === "navbar") {
+    nav.className += " responsive"
+  } else {
+    nav.className = "navbar"
+  }
+}
+const menuIcon = document.querySelector('.menu-icon');
+
+menuIcon.addEventListener('click', () => toggleMenu())
