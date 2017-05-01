@@ -1,5 +1,6 @@
 let counter = 0;
-const gallerySize = 4;
+const gallerySize = document.querySelectorAll('.image').length;
+document.querySelector('.counter').innerHTML = (counter + 1) + " / " + gallerySize
 
 function changeImage() {
   const imgList = document.querySelectorAll('.image');
@@ -13,14 +14,14 @@ function changeImage() {
       imgList[i].setAttribute("class", "image image-invisible");
     }
   }
-  document.querySelector('.counter').innerHTML = (counter + 1) + " / " + (gallerySize + 1)
+  document.querySelector('.counter').innerHTML = (counter + 1) + " / " + gallerySize
 }
 
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 
 btnNext.addEventListener('click', function () {
-  if (counter === gallerySize) {
+  if (counter + 1 === gallerySize) {
     counter = 0;
   } else {
     counter += 1
@@ -30,7 +31,7 @@ btnNext.addEventListener('click', function () {
 
 btnPrev.addEventListener('click', () => {
   if (counter === 0) {
-    counter = gallerySize;
+    counter = gallerySize - 1;
   } else {
     counter -= 1
   }
