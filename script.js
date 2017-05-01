@@ -2,7 +2,7 @@ let counter = 0;
 const gallerySize = document.querySelectorAll('.image').length;
 document.querySelector('.counter').innerHTML = (counter + 1) + " / " + gallerySize
 
-function changeImage() {
+function changeVisibleImage() {
   const imgList = document.querySelectorAll('.image');
   for (let i = 0; i < imgList.length; i++) {
     if (i === counter) {
@@ -23,7 +23,7 @@ btnNext.addEventListener('click', function () {
   } else {
     counter += 1
   }
-  changeImage()
+  changeVisibleImage()
 })
 
 btnPrev.addEventListener('click', () => {
@@ -32,10 +32,10 @@ btnPrev.addEventListener('click', () => {
   } else {
     counter -= 1
   }
-  changeImage()
+  changeVisibleImage()
 })
 
-function toggleMenu() {
+function toggleResponsiveMenu() {
   const nav = document.getElementById('topnav');
   if (nav.className === "navbar") {
     nav.className += " responsive"
@@ -44,7 +44,7 @@ function toggleMenu() {
   }
 }
 
-function closeMenu() {
+function closeResponsiveMenu() {
   const nav = document.getElementById('topnav');
   if (nav.className === "navbar responsive") {
     nav.className = "navbar"
@@ -54,5 +54,5 @@ function closeMenu() {
 const menuIcon = document.querySelector('.menu-icon');
 const menuItems = document.querySelectorAll('.nav-item');
 
-menuIcon.addEventListener('click', () => toggleMenu());
-menuItems.forEach(el => el.addEventListener('click', () => closeMenu()))
+menuIcon.addEventListener('click', () => toggleResponsiveMenu());
+menuItems.forEach(el => el.addEventListener('click', () => closeResponsiveMenu()))
