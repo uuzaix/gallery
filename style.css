@@ -18,7 +18,7 @@ html, body {
 }
 
 
-/* navigation header*/
+/*------------navigation header----------*/
 .navbar {
   position: fixed;
   top: 0;
@@ -70,6 +70,7 @@ html, body {
   align-items: center;
 }*/
 
+/*-------------------------------------*/
 .image-invisible {
   display: none;
 }
@@ -82,6 +83,7 @@ html, body {
   height: 100%;
 }
 
+/*-----------------home-------------------*/
 #home {
   position: relative;
   width: 100%;
@@ -89,9 +91,20 @@ html, body {
   COLOR: #FFF;
 }
 
+.home-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro {
     font-size: 3.5em;
     font-weight: 200;
+    padding: 0 20px;
+}
+
+.intro-list {
+  padding-left: 0;
 }
 
 .intro-list li {
@@ -122,17 +135,31 @@ html, body {
   border-bottom: 2px solid #9C27B0;
 }
 
+
+/*--------------about--------------*/
 .about-content {
   width: 50%;
 }
 
+.title {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.gallery-title {
+  color: #00796B;
+}
+
+.about-title {
+  color: #9C27B0;
+}
+
+
+/*-----------gallery----------*/
+
 #gallery-container {
   width: 100%;
-}
-.gallery-title {
-  padding: 20px;
-  color: #00796B;
-  font-weight: bold;
 }
 
 #gallery {
@@ -185,7 +212,8 @@ html, body {
   top: 8px;
 }
 
-/*footer*/
+
+/*---------------footer----------*/
 .footer {
   padding-left: 0px;
   font-size: 0.7em;
@@ -211,7 +239,43 @@ html, body {
   color: #009688;
 }
 
-/*media querries*/
+
+/*---------------contact----------*/
+ #contact { 
+   background-color: #BA68C8;
+ }
+
+#contact a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-title  {
+  color: #fff;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/*---------------media querries---------------*/
+
+@media (max-width: 1100px) {
+
+.home-title {
+  flex-flow: column;
+}
+
+  .intro-icon {
+    display: none;
+  }
+  html, body {
+    font-size: 1em;
+  }
+}
+
 @media screen and (max-width: 600px) {
   html, body {
     font-size: 0.9em;
@@ -225,12 +289,10 @@ html, body {
   .navbar .menu-icon {
     display: block;
   }
-
   .navbar.responsive .nav{
     flex-direction: column;
     width: 100%;
   }
-
   .navbar.responsive .menu-icon {
     position: absolute;
     right: 0;
@@ -240,8 +302,11 @@ html, body {
     display: block;
     text-align: left;
   }
+  .home-title {
+  flex-flow: row;
+}
   .intro {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .intro-list li {
       font-size: 1em;
@@ -252,5 +317,12 @@ html, body {
   #home {
     height: 50%;
   }
+  /*#gallery-container {
+    height: 80%;
+  }*/
 
+   /*#contact {
+     height: 20%;
+   }*/
 }
+
