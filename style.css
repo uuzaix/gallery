@@ -13,14 +13,16 @@ html, body {
 }
 
 .container {
-  padding-top: 70px;
+  /*padding-top: 70px;*/
+  height: 100%;
 }
 
 
 /* navigation header*/
 .navbar {
-  top: 0;
   position: fixed;
+  top: 0;
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -62,22 +64,75 @@ html, body {
 }
 
 /**/
-.main {
+/*.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+}*/
 
 .image-invisible {
   display: none;
 }
 
-#home {
-  height: 200px;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-#about {
-  height: 200px;
+#home {
+  position: relative;
+  width: 100%;
+  background-color: #009688;
+  COLOR: #FFF;
+}
+
+.intro {
+    font-size: 3.5em;
+    font-weight: 200;
+}
+
+.intro-list li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2.0em;
+    margin-right: .5em;
+    font-weight: 200;
+}
+
+.intro-list li:before {
+    content: '\00B7';
+    margin-right: .5em;
+}
+
+.intro-list li:first-child:before {
+    content: none;
+}
+
+.intro-btn {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+.intro-btn:hover {
+  border-bottom: 2px solid #9C27B0;
+}
+
+.about-content {
+  width: 50%;
+}
+
+#gallery-container {
+  width: 100%;
+}
+.gallery-title {
+  padding: 20px;
+  color: #00796B;
+  font-weight: bold;
 }
 
 #gallery {
@@ -136,9 +191,6 @@ html, body {
   font-size: 0.7em;
   padding-bottom: 10px;
   color: #586069;
-  right: 0;
-  bottom: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   /*border-top: 1px solid #E1BEE7;*/
@@ -161,9 +213,12 @@ html, body {
 
 /*media querries*/
 @media screen and (max-width: 600px) {
-    html, body {
-      font-size: 0.9em;
+  html, body {
+    font-size: 0.9em;
   }
+  /*.container {
+    padding-top: 50px;
+  }*/
   .nav a:not(:first-child) {
     display: none;
   }
@@ -185,4 +240,17 @@ html, body {
     display: block;
     text-align: left;
   }
+  .intro {
+    font-size: 2em;
+  }
+  .intro-list li {
+      font-size: 1em;
+  }
+  .about-content {
+    width: 90%;
+  }
+  #home {
+    height: 50%;
+  }
+
 }

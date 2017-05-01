@@ -10,7 +10,9 @@
 
 <body>
   <div class="container">
-    <nav id="topnav" class="navbar" role="navigation">
+
+
+    <div id="topnav" class="navbar" role="navigation">
       <div class="nav">
         <a class="nav-item" id="nav-home" href="#home">Home</a>
         <a class="nav-item" id="nav-about" href="#about">About</a>
@@ -20,15 +22,39 @@
       <div class="menu-icon pointer">
         <span class="toggle">&#9776</span>
       </div>
-    </nav>
-    <div class="main">
-      <div id="home">
-        <p>Some default text</p>
+    </div>
+
+
+    <div id="home" class="flex-column">
+      <div>
+        <span class="intro">John Smith</span>
+        <span class="intro"> &#9824 </span>
+        <span class="intro">Fotographer</span>
       </div>
-      <div id="about">
-        <p>Some default text</p>
-      </div>
-      <div>Test Gallery</div>
+      <ul class="intro-list">
+        <li>Portraits</li>
+        <li>Landscapes</li>
+        <li>Reportage</li>
+      </ul>
+      <a href="#gallery" class="intro-btn">View portfolio<br></a>
+    </div>
+
+
+    <div id="about" class="flex-column">
+      <h2 class="title about-title"><strong>About me</strong></h2>
+      <p class="about-content">Hi!<br>I am a photographer based in <a href="https://www.google.de/maps/@48.1472606,11.5733761,11.26z?hl=en" target='_blank'>Munich, Germany</a>.<br><br>Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Fusce et semper ante. Maecenas pretium ac urna sit amet ultricies.
+        Phasellus nunc metus, convallis sed augue faucibus, vestibulum mattis ligula. Proin ornare urna et auctor elementum.
+        Morbi lorem lorem, varius sed erat vel, facilisis imperdiet nisl. In eu massa sit amet dui sodales congue a quis
+        metus. Maecenas interdum mi vitae odio vulputate, eget aliquam sapien fringilla. Quisque fermentum massa at elit
+        porttitor maximus. Vestibulum porta imperdiet venenatis. Integer dignissim mi vel sapien posuere rhoncus. Nam ac
+        leo sit amet velit pulvinar faucibus. Suspendisse feugiat enim enim, ac blandit eros vulputate eu. Nam eu tortor
+        vehicula, tincidunt arcu sit amet, volutpat augue. Proin congue facilisis lectus vel dictum.</p>
+    </div>
+
+
+    <div id="gallery-container" class="flex-column">
+      <div class="title gallery-title">My best works</div>
       <div id="gallery">
         <img class="image" src="http://lorempixel.com/600/350/?1" alt="Randow picture from the gallery">
         <img class="image image-invisible" src="http://lorempixel.com/600/350/?2" alt="Random picture from the gallery">
@@ -50,6 +76,7 @@
       </div>
       <div class="counter">1 / 5</div>
     </div>
+    <!--</div>-->
     <div class="footer">
       <div>© 2017 <a href="https://github.com/uuzaix/">Larisa Dolgova</a></div>
       <div><a href="https://github.com/uuzaix/gallery">GitHub</a></div>
