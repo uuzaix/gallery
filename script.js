@@ -4,13 +4,10 @@ document.querySelector('.counter').innerHTML = (counter + 1) + " / " + gallerySi
 
 function changeImage() {
   const imgList = document.querySelectorAll('.image');
-  console.log(imgList)
   for (let i = 0; i < imgList.length; i++) {
     if (i === counter) {
-      console.log("visible", i)
       imgList[i].setAttribute("class", "image");
     } else {
-      console.log("invisible", i)
       imgList[i].setAttribute("class", "image image-invisible");
     }
   }
@@ -55,7 +52,7 @@ function closeMenu() {
 }
 
 const menuIcon = document.querySelector('.menu-icon');
-menuIcon.addEventListener('click', () => toggleMenu());
-
 const menuItems = document.querySelectorAll('.nav-item');
+
+menuIcon.addEventListener('click', () => toggleMenu());
 menuItems.forEach(el => el.addEventListener('click', () => closeMenu()))
