@@ -64,7 +64,6 @@ html, body {
 
 
 /*----------------utility classes-----------------*/
-
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -157,7 +156,6 @@ html, body {
 
 
 /*-----------gallery----------*/
-
 #gallery-container {
   width: 100%;
 }
@@ -278,7 +276,6 @@ html, body {
 
 
 /*---------------media querries---------------*/
-
 @media (max-width: 1100px) {
   html, body {
     font-size: 1em;
